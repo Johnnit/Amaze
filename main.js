@@ -3,7 +3,7 @@
 let fashion = [
    {
     name : 'Fashion Wears',
-    image : 'Clothe.jpg',
+    image : 'clothe.jpg',
     price : "#2000",
     off: 50
   },
