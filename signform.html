@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Signup form</title>
+  <style>
+    body{
+      min-height:100vh;
+     
+    }
+    .wrapper{
+      width:100vw;
+      display:flex;
+    background:rgba(60, 53, 60, 0.1);
+      border-radius:10px;
+      padding: 20px;
+      justify-content:center;
+      align-items:center;
+      min-height: 100vh;
+    }
+    .container{
+      background: white;
+      display:flex;
+    background:white;
+      border-radius:15px;
+      height: 500px;
+     position:relative;
+      align-items: center;
+    }
+    .image{
+      height:100%;
+      width:50%;
+    }
+    .image img{
+      width:100%;
+      height: 100%;
+border-top-left-radius: 15px;
+border-bottom-left-radius: 15px;
+    }
+    form{
+      display:flex;
+      width:50%;
+      flex-direction: column;
+       text-align:center;
+       position: relative;
+       padding: 20px;
+    }
+  .container i{
+      font-size: 30px;
+      border: 1px solid black;
+      color:red;
+      width:max-content;
+      position: absolute;
+      right :10px;
+      top:10px;
+     padding: 5px 10px;
+     float:right;
+     border-radius: 10px;
+     
+    }
+    form h2{
+      margin-top:50px;
+      font-size:30px;
+      font-weight:light;
+     
+    }
+    input{
+      padding:10px;
+      font-size: large;
+      margin-top:20px;
+      border-radius: 10px;
+      outline: none;
+    }
+    input[type="submit"]{
+      background: linear-gradient(to left, black,rebeccapurple,white);
+      color:white;
+      font-weight: 600;
+    }
+    .teaser{
+      position: absolute;
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+    }
+    @media screen and (max-width:450px){
+      .container{
+        height: auto;
+        width:320px;
+      }
+      .image {
+        display: none;
+      }
+      form{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    
+  <div class="container">
+    <i class="fa fa-times" id="close">&times;</i>
+    <div class="image">
+      <img src="clothe.jpg" alt="" />
+    </div>
+    <form action="" method="get">
+      
+      <img src="" alt="">
+      <h2>Become a Subscriber</h2>
+      <span>Subscribe to our blog to get latest update straight into your inbox.</span>
+      <input type="email" name="email" id="subscriber" placeholder="Enter your Email address">
+      <input type="submit" value="Subscribe">
+    </form>
+  </div>
+  
+  </div>
+  
+  
+</body>
+
+</html>

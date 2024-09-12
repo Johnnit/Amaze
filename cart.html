@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cart</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+  body{
+    min-height: 100vh;
+  }
+    .container{
+      max-width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;
+     position: relative;
+     transform: translateY(150px);
+    }
+    .container table{
+      width:100%;
+      position: relative;
+    
+    }
+    table::before{
+      content: "CART";
+      width: 100%;
+      top:50%;
+      left:50%;
+      font-size: 50px;
+      font-weight: 700;
+      opacity: 0.1;
+      position: absolute;
+      color:red;
+      z-index: -1;
+    }
+    table,th,td{
+      border:1px solid rebeccapurple;
+      border-collapse: collapse;
+    }
+    .container table tr{
+      width:100%;
+      height: 100%;
+     overflow:hidden;
+     z-index: 2;
+    }
+    tr th{
+      width: max-content;
+      padding: 15px 0;
+      box-shadow: 2px 2px 10px whitesmoke,
+      -2px -2px 10px whitesmoke;
+    }
+    tr td{
+      width: 100px;
+      padding:20px;
+      font-size:20px;
+      white-space: no-wrap;
+      box-shadow: 2px 2px 10px whitesmoke,
+      -2px -2px 10px rgba(219, 221, 232, 1);
+    }
+  
+    .container table tr td img{
+      
+      width: 200px;
+      height: 100%;
+    }
+    td.product{
+      width: 400px;
+      max-width: 500px;
+      font-size: 14px;
+     padding:10px;
+      font-weight: 500;
+      text-align: center;
+    }
+     td.product div {
+       display: flex;
+       flex-direction:column;
+       gap: 10px;
+       justify-content: center;
+       align-items: center;
+     }
+     
+     td.product div.colors {
+       display: flex;
+       gap: 10px;
+       justify-content: center;
+     }
+    td.product div.colors span{
+      width: 10px;
+      height: 10px;
+      background: red;
+      border-radius: 50%;
+    }
+     tr td:nth-child(3) .change{
+       width: 100%;
+        height:100%;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        justify-content: center;
+        align-items: center ;
+     padding: 15%;
+     border:none;
+  
+      }
+      tr td:nth-child(3) .change button{
+        padding: 15px;
+        background: darkslateblue;
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+        align-content: center;
+      }
+      tr td:last-child{
+        text-align: center;
+      }
+      tr td:last-child a{
+        color:red;
+        border:none;
+        font-size:20px;
+        
+        
+      }
+      .quantity span{
+        font-size: 14px;
+      }
+      td.price{
+        font-size: 16px;
+        font-weight: 500;
+      }
+      table tr:last-child td{
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+      }
+      .dwnBtns{
+        position: absolute ;
+        bottom:0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap:30px;
+        padding: 10px 20px;
+        
+      }
+      .dwnBtns button{
+        padding: 10px 20px;
+        font-size: 18px;
+        border:none;
+        border-radius:10px;
+        font-weight:500;
+      }
+      .dwnBtns button:nth-child(2){
+        background: rebeccapurple;
+        color: white;
+      }
+        .dwnBtns button:nth-child(1){
+          border: 1px solid rebeccapurple;
+        }
+       .dwnBtns button:nth-child(1) a{
+         color: rebeccapurple;
+         
+       }
+        .dwnBtns button:nth-child(2) a{
+          color: white;
+        }
+        
+    @media screen and (width < 460px){
+      body{
+        width:100%;
+        padding: 0;
+        font-size: smaller;
+      }
+      .container{
+        transform: translateY(150px);
+        margin-bottom: 250px;
+      }
+      table::before{
+      content: "CART";
+      width: 100%;
+      top:50%;
+      left:50%;
+      opacity: 0.1;
+      position: absolute;
+      color:red;
+      
+    }
+      tr td{
+        padding: 5px;
+        font-size: 8px;
+        align-items: center;
+        text-align: center;
+      }
+      
+        .container table tr td img{
+      
+      width:70px;
+      height: 10%;
+      padding: 5px 0;
+    }
+       td.product{
+      width: 100%;
+      font-size: 14px;
+     padding:10px;
+      font-weight: 500;
+      text-align: center;
+    }
+    tr td:nth-child(3) .change{
+       width: 100%;
+        height:100%;
+       display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center ;
+        padding: 25px 10px;
+      }
+      tr td:nth-child(3) .change button{
+        padding: 10px 13px;
+        background: darkslateblue;
+        border-radius: 50%;
+        color: white;
+        font-size: 10px;
+        border:none;
+      }
+     .dwnBtns{
+        position: fixed;
+        bottom: 0;
+        z-index: 10;
+        background: whitesmoke;
+        width: 100%;
+        display: flex;
+        justify-items:space-between;
+      
+      }
+     
+    }
+  </style>
+</head>
+
+  <body>
+        <div class="nav">
+  <!--nav up section-->  
+  <marquee behavior="smooth" direction="left">Welcome to AMaAzöñ fashion store</marquee>
+  <div class="up">
+  <h2>AMAzöñ</h2>
+
+  <!--search-->
+  <form class="search">
+  <input type="search" name="search" class="query" placeholder= "Search AMAzöñ">
+  <button class="fa fa-search search-icon" name="searchBtn"></button>
+  </form>
+  
+    <div class="sign">
+   <!--<span class="text">Ajala John &rarr;</span>-->
+    <span class="fa fa-user user"></span>
+    <div class="dropdown">
+      <span>Profile</span>
+       <span>Settings</span>
+      <span class="login">Login</span>
+     
+    </div>
+    </div>
+    
+  <div class="cart" onclick="window.open('vart.html');">
+    <span class="count">0</span>
+    <span class="fa fa-shopping-cart cart-icon"></span>
+    </div>
+    
+    </div>
+    
+    <div class="mid">
+      <form class="mobile-search">
+  <input type="search" name="search" class="query" placeholder= "Search AMAzöñ">
+  <button class="fa fa-search search-icon" name="searchBtn" style="color: white;"></button>
+  </form>
+  </div>
+  
+    <!-- nav bottom section-->
+    <div class="bottom">
+     <div class="ul">
+        <a href="" class="active">All</a>
+        <a href="today.php">Today's Selection</a>
+        <a href="collection.html">Fashion</a>
+        <a href="app.php">Appliances</a>
+        <a href="phone.php">Phones and gadgets</a>
+     </div>
+    </div>
+    
+</div>
+<!--nav ends-->
+
+    <div class="container">
+      <!--cart products-->
+    <table>
+      <tr>
+        <th>Image</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Remove</th>
+      </tr>
+      <tr>
+        <td class="image"><img src="clothe.jpg" alt="clothe.jpg"></td>
+        <td class="product">
+          <div>
+      
+          <span class="title">Men shirt for wears off snd the hhhh dyfd Jing hu </span>
+          <div class="colors" title="colors">
+            <i>Color: </i>
+        <span class="color"></span>
+          </div>
+        <span class="size" title="size">Size: 40</span>
+          </div>
+        </td>
+        <td class="quantity">
+          <div class="change">
+           
+          <button type="button" class="dec">-</button>
+          <span class="count">1</span>
+            <button type="button" class="inc">+</button>
+          </div>
+        </td>
+        <td class="price">#3000000</td>
+        <td><a href="" class="fa fa-trash"></a></td>
+      </tr>
+      
+        <tr>
+        <td class="image"><img src="clothe.jpg" alt="clothe.jpg"></td>
+        <td class="product">
+          <div>
+      
+          <span class="title">Men shirt for wears off snd the hhhh dyfd Jing hu </span>
+          <div class="colors" title="colors">
+            <i>Color: </i>
+        <span class="color"></span>
+          </div>
+        <span class="size" title="size">Size: 40</span>
+          </div>
+        </td>
+        <td class="quantity">
+          <div class="change">
+           
+          <button type="button" class="dec">-</button>
+          <span class="count">1</span>
+            <button type="button" class="inc">+</button>
+          </div>
+        </td>
+        <td class="price">#3000000</td>
+        <td><a href="" class="fa fa-trash"></a></td>
+      </tr>
+      
+      
+        <tr>
+        <td class="image"><img src="clothe.jpg" alt="clothe.jpg"></td>
+        <td class="product">
+          <div>
+      
+          <span class="title">Men shirt for wears off snd the hhhh dyfd Jing hu </span>
+          <div class="colors" title="colors">
+            <i>Color: </i>
+        <span class="color"></span>
+          </div>
+        <span class="size" title="size">Size: 40</span>
+          </div>
+        </td>
+        <td class="quantity">
+          <div class="change">
+           
+          <button type="button" class="dec">-</button>
+          <span class="count">1</span>
+            <button type="button" class="inc">+</button>
+          </div>
+        </td>
+        <td class="price">#3000000</td>
+        <td><a href="" class="fa fa-trash"></a></td>
+      </tr>
+      
+      
+        <tr>
+        <td class="image"><img src="clothe.jpg" alt="clothe.jpg"></td>
+        <td class="product">
+          <div>
+      
+          <span class="title">Men shirt for wears off snd the hhhh dyfd Jing hu </span>
+          <div class="colors" title="colors">
+            <i>Color: </i>
+        <span class="color"></span>
+          </div>
+        <span class="size" title="size">Size: 40</span>
+          </div>
+        </td>
+        <td class="quantity">
+          <div class="change">
+           
+          <button type="button" id="dec">-</button>
+          <span class="count">1</span>
+            <button type="button" id="inc">+</button>
+          </div>
+        </td>
+        <td class="price">#3000000</td>
+        <td><a href="" class="fa fa-trash"></a></td>
+      </tr>
+      
+      
+        <tr>
+        <td class="image"><img src="clothe.jpg" alt="clothe.jpg"></td>
+        <td class="product">
+          <div>
+      
+          <span class="title">Men shirt for wears off snd the hhhh dyfd Jing hu </span>
+          <div class="colors" title="colors">
+            <i>Color:</i>
+        <span class="color"></span>
+          </div>
+        <span class="size" title="size">Size: 40</span>
+          </div>
+        </td>
+        <td class="quantity">
+          <div class="change">
+           
+          <button type="button" id="dec">-</button>
+          <span class="count">1</span>
+            <button type="button" id="inc">+</button>
+          </div>
+        </td>
+        <td class="price">#3000000</td>
+        <td><a href="" class="fa fa-trash"></a></td>
+      </tr>
+      
+        <tr>
+          <td></td>
+          <td></td>
+          <td>Toal Amount</td>
+          <td>#12000</td>
+        </tr>
+    </table>
+      
+   
+    </div>
+    
+       <div class="dwnBtns">
+        <button><a href="Close">Close</a></button>
+        <button type="submit"><a href="Checkout">Checkout</a></button>
+      </div>
+    <script>
+      let inc = document.querySelectorAll('.inc');
+      let dec = document.querySelectorAll('.dec');
+    /*  let count = document.querySelector('.change .count');*/
+      let counts = 1;
+      inc.forEach(e=>{
+        e.addEventListener('click',()=>{
+          
+    let count = e.previousElementSibling;
+       counts++;
+       count= Number(count.innerHTML);
+        count += 1;
+      });
+      })
+      dec.addEventListener('click', () => {
+        counts--;
+        
+        if(count.innerHTML == 1){
+          counts=1;
+          count.innerHTML = counts;
+        }
+        count.innerHTML = counts;
+      });
+    </script>
+</body>
+
+</html>
